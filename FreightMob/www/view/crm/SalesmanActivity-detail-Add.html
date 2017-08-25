@@ -1,0 +1,79 @@
+
+<ion-view title="SalesmanActivity-Detail-Add">
+    <ion-header-bar align-title="center" no-tap-scroll=false class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnDetail()"></button>
+        </div>
+        <h1 class="title">Add</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <div class="list card">
+            <div class="item item-body">
+                <label class="item item-input item-md-label ng-valid" id="iDateTime" highlight-color="balanced" type="text">
+                    <span class="input-label">Date</span>
+                    <span class="h5" ng-bind="ShowDate(Smsa2.DateTime)"></span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iCustomerName" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="Smsa2.CustomerName" readonly="true">
+                    <span class="input-label">Customer</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iDescription" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="Smsa2.Description">
+                    <span class="input-label">Description</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iQuotationNo" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="Smsa2.QuotationNo">
+                    <span class="input-label">QuotationNo</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iReference" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="Smsa2.Reference">
+                    <span class="input-label">Reference</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iStatus" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="Smsa2.Status">
+                    <span class="input-label">Status</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iDiscussion" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="Smsa2.Discussion">
+                    <span class="input-label">Discussion</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iConclusion" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="Smsa2.Conclusion">
+                    <span class="input-label">Conclusion</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iAction" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="Smsa2.Action">
+                    <span class="input-label">Action</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iRemark" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="Smsa2.Remark">
+                    <span class="input-label">Remark</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar align-title="center" class="bar-positive">
+        <div class="buttons">
+            <button class="button" ng-click="returnInsertSmsa2()">
+                <i class="icon ion-android-done"></i>&nbsp;&nbsp;Save
+            </button>
+        </div>
+        <h1 class="title"> </h1>
+        <div class="buttons">
+            <button class="button" ng-click="returnDetail()">
+                <i class="icon ion-arrow-return-right"></i>&nbsp;&nbsp;Return
+            </button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

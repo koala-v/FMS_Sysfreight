@@ -1,0 +1,34 @@
+
+<ion-view title="ShipmentStatusList">
+    <ion-header-bar align-title="center" no-tap-scroll=false class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnShipmentStatus()"></button>
+        </div>
+        <h1 class="title">Tracking - <span ng-bind="TrackingList.FilterName"></span></h1>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <div class="card" ng-repeat="Jmjm1 in Jmjm1s">
+            <div class="list">
+                <ion-item nav-clear menu-close class="item" ng-click="GoToDetail(Jmjm1)">
+                    <h2>Job No&nbsp;:&nbsp;<span ng-bind="Jmjm1.JobNo"></span></h2>
+                    <h2 ng-show="funcShowLabel('ContainerNo')">Container No&nbsp;:&nbsp;<span ng-bind="Jmjm1.ContainerNo"></span></h2>
+                    <p><i class="icon iconfont ion-calendar"></i>&nbsp;&nbsp;ETD&nbsp;:&nbsp;<span ng-bind="ShowDate(Jmjm1.ETD)"></span></p>
+                    <p><i class="icon iconfont ion-calendar"></i>&nbsp;&nbsp;ETA&nbsp;:&nbsp;<span ng-bind="ShowDate(Jmjm1.ETA)"></span></p>
+                    <!--p>
+						<i class="iconfont icon-accountcity"></i>&nbsp;&nbsp;POL&nbsp;:&nbsp;
+						<span ng-show="Jmjm1.ModuleCode === 'SE' || Jmjm1.ModuleCode === 'SI'" ng-bind="Jmjm1.PortOfLoadingName"></span>
+						<span ng-show="Jmjm1.ModuleCode != 'SE' && Jmjm1.ModuleCode != 'SI'" ng-bind="Jmjm1.OriginName"></span>
+					</p>
+					<p>
+						<i class="iconfont icon-accountcity"></i>&nbsp;&nbsp;POD&nbsp;:&nbsp;
+						<span ng-show="Jmjm1.ModuleCode === 'SE' || Jmjm1.ModuleCode === 'SI'" ng-bind="Jmjm1.PortOfDischargeName"></span>
+						<span ng-show="Jmjm1.ModuleCode != 'SE' && Jmjm1.ModuleCode != 'SI'" ng-bind="Jmjm1.DestName"></span>
+					</p-->
+                    <p>Vessel&nbsp;:&nbsp;<span ng-bind="Jmjm1.VesselName"></span>&nbsp;V.&nbsp;<span ng-bind="Jmjm1.VoyageNo"></span></p>
+                </ion-item>
+            </div>
+        </div>
+        <ion-infinite-scroll ng-if="TrackingList.CanLoadedMoreData" on-infinite="funcLoadMore()" distance="1%"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

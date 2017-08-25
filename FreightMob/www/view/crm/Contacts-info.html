@@ -1,0 +1,87 @@
+
+<ion-view title="Contacts-Info">
+    <ion-header-bar class="bar-positive" align-title="center">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnDetail()"></button>
+        </div>
+        <div class="title">Contact Info</div>
+        <div class="buttons">
+            <button class="button button-icon button-small button-clear ion-android-create" ng-click="GoToContactEdit()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <div class="list card">
+            <div class="item">
+                <p>
+                    <i class="iconfont icon-name"></i>&nbsp;&nbsp;
+                    <span ng-bind="rcbp3.ContactName"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="iconfont icon-title1"></i>&nbsp;&nbsp;
+                    <span ng-bind="rcbp3.Title"></span>
+                </p>
+                <p>
+                    <i class="iconfont icon-phone3"></i>&nbsp;&nbsp;
+                    <a ng-href="tel:{{rcbp3.Telephone}}" style="text-decoration: none;"><span ng-bind="rcbp3.Telephone"></span></a>
+                </p>
+                <p>
+                    <i class="iconfont icon-fax1"></i>&nbsp;&nbsp;
+                    <span ng-bind="rcbp3.Fax"></span>
+                </p>
+                <p>
+                    <i class="iconfont icon-phone2"></i>&nbsp;&nbsp;
+                    <a ng-href="tel:{{rcbp3.Handphone}}" style="text-decoration: none;"><span ng-bind="rcbp3.Handphone"></span></a>
+                </p>
+                <p>
+                    <i class="iconfont icon-email"></i>&nbsp;&nbsp;
+                    <span ng-bind="rcbp3.Email"></span>
+                </p>
+            </div>
+            <div class="item item-body">
+                <img class="full-image" ng-show="blnContainNameCard(rcbp3)" ng-src="data:image/png;base64,{{rcbp3.NameCard}}" />
+                <p>
+                    <i class="iconfont icon-birthdaycake"></i>&nbsp;&nbsp;
+                    <span ng-bind="ShowDate(rcbp3.Birthday)"></span>
+                </p>
+                <p>
+                    <i class="iconfont icon-like"></i>&nbsp;&nbsp;
+                    <span ng-bind="rcbp3.Like"></span>
+                </p>
+                <p>
+                    <i class="iconfont icon-dislike"></i>&nbsp;&nbsp;
+                    <span ng-bind="rcbp3.Dislike"></span>
+                </p>
+                <p>
+                    <i class="iconfont icon-facebook"></i>&nbsp;&nbsp;
+                    <span ng-bind="rcbp3.Facebook"></span>
+                </p>
+                <p>
+                    <i class="iconfont icon-msn"></i>&nbsp;&nbsp;
+                    <span ng-bind="rcbp3.MSN"></span>
+                </p>
+                <p>
+                    <i class="iconfont icon-skype"></i>&nbsp;&nbsp;
+                    <span ng-bind="rcbp3.Skype"></span>
+                </p>
+                <p>
+                    <i class="iconfont icon-twitter"></i>&nbsp;&nbsp;
+                    <span ng-bind="rcbp3.Twitter"></span>
+                </p>
+                <p>
+                    <i class="iconfont icon-qq"></i>&nbsp;&nbsp;
+                    <span ng-bind="rcbp3.QQ"></span>
+                </p>
+                <p>
+                    Others&nbsp;&nbsp;:&nbsp;&nbsp;<span ng-bind="rcbp3.Others"></span>
+                </p>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar align-title="center" class="bar-positive">
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button" ng-click="returnDetail()">
+                <i class="icon ion-arrow-return-right"></i>&nbsp;&nbsp;Return
+            </button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

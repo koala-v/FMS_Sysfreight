@@ -1,0 +1,57 @@
+<ion-view title="DocumentScan">
+    <ion-header-bar align-title="center" no-tap-scroll=false class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnMain()"></button>
+        </div>
+        <h1 class="title">Document Scan</h1>
+    </ion-header-bar>
+    <ion-pane>
+        <div style="height: 43px;"></div>
+        <div class="card">
+            <div class="item">
+                <ion-md-input type="text" id="iJobNo" class="pull-left" style="width:65%;" placeholder="Job No" highlight-color="balanced" ng-model="Doc.JobNo"></ion-md-input>
+                <div style="width:15%;position:relative;">
+                    <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="openCam()">
+                        <i class="icon iconfont ion-qr-scanner"></i>
+                    </button>
+                </div>
+                <div class="pull-right" style="width:20%;position:relative;">
+                    <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="showActionSheet()">
+                        <i class="icon iconfont ion-android-upload"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </ion-pane>
+    <script id="camera.html" type="text/ng-template">
+        <ion-modal-view>
+            <ion-header-bar class="bar-positive" align-title="center">
+                <div class="buttons">
+                    <button class="button button-icon button-clear ion-android-arrow-back" ng-click="closeModal('camera')"></button>
+                </div>
+                <div class="h1 title">Camera</div>
+            </ion-header-bar>
+            <ion-pane>
+                <div style="height: 43px;"></div>
+                <webcam channel="myChannel" ng-show="capture==null"></webcam>
+                <canvas id="canvas1" width="320" height="480" visble="false"></canvas>
+                <img width="320" ng-src='{{capture}}' ng-show="capture!=null"/>
+            </ion-pane>
+            <ion-footer-bar class="bar-positive hide-on-keyboard-open">
+                <div class="button-bar">
+                    <button class="button icon ion-android-refresh" ng-click="reCapture()">
+                        &nbsp;Restore
+                    </button>
+                    <button class="button icon ion-android-camera" ng-click="takePhoto()">
+                    </button>
+                    <button class="button icon ion-arrow-return-right" ng-click="closeModal()" ng-if="capture==null">
+                        &nbsp;Return
+                    </button>
+                    <button class="button icon ion-android-done" ng-click="uploadPhoto()" ng-if="capture!=null">
+                        &nbsp;Done
+                    </button>
+                </div>
+            </ion-footer-bar>
+        </ion-modal-view>
+    </script>
+</ion-view>

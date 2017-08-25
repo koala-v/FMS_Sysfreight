@@ -1,0 +1,21 @@
+<ion-view title="Contacts-List">
+    <ion-header-bar align-title="center" no-tap-scroll=true class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnSearch()"></button>
+        </div>
+        <h1 class="title"><span ng-bind="ContactsList.BusinessPartyNameLike"></span></h1>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <div class="list">
+            <ion-item class="item" ng-repeat="Rcbp1 in Rcbp1s" ng-click="GoToDetail(Rcbp1)">
+                <p><span ng-bind="Rcbp1.BusinessPartyName"></span></p>
+                <p><i class="iconfont icon-phone3"></i>&nbsp;&nbsp;<span ng-bind="Rcbp1.Telephone"></span></p>
+                <p><i class="iconfont icon-fax1"></i>&nbsp;&nbsp;<span ng-bind="Rcbp1.Fax"></span></p>
+                <p><i class="iconfont icon-accountcity"></i>&nbsp;&nbsp;<span ng-bind="Rcbp1.CityName"></span></p>
+                <p><i class="iconfont icon-name"></i>&nbsp;&nbsp;<span ng-bind="Rcbp1.ContactName1"></span></p>
+            </ion-item>
+        </div>
+        <ion-infinite-scroll ng-if="ContactsList.CanLoadedMoreData" on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

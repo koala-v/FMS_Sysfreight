@@ -1,0 +1,324 @@
+html {
+    background-color: #EFEFEF;
+}
+ion-content {
+    top: 0 !important;
+}
+.navBar .bar{
+    border-style: none;
+    border-top: 0px none;
+    border-bottom: 0px none;
+}
+.navBar .bar-footer {
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+.scroll-view.scroll-y {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.pane {
+    background-color: #EFEFEF;
+}
+.app {
+  position: relative;
+  height: 100%;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.Center-Container {
+  position: relative;
+}
+.Absolute-Center {
+  width: 68%;
+  height: 15%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+.Absolute-Center.is-Responsive {
+  width: 90%;
+  height: 60%;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 40px;
+}
+.Absolute-Center.is-Image {
+  text-align: center;
+  vertical-align:middle;
+}
+.Absolute-Center.is-Image img {
+  width: 100%;
+  height: auto;
+}
+.tc-light-blue-A700 {
+    color: #0091EA!important;
+}
+.mainList a {
+	text-decoration: none;
+}
+.comments {
+	width:100%;
+	overflow:auto;
+}
+.bar-footer {
+    height:3.2em;
+}
+.item-input-wrapper{
+    background: #fff;
+}
+
+.iconfontColor {
+	color: #387ef5;
+}
+.iconfont {
+	color: #387ef5;
+}
+
+.iconfont-assertive {
+	color: #ef473a;
+}
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.loader {
+  position: relative;
+  margin: 0px auto;
+  width: 100px;
+  height: 100px;
+  zoom: 1.7; }
+
+.circular {
+  -webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+  height: 100px;
+  position: relative;
+  width: 100px; }
+
+.path {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round; }
+
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35; }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124; } }
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35; }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124; } }
+
+@-webkit-keyframes color {
+  100%, 0% {
+    stroke: #d62d20; }
+  40% {
+    stroke: #0057e7; }
+  66% {
+    stroke: #008744; }
+  80%, 90% {
+    stroke: #ffa700; } }
+
+@keyframes color {
+  100%, 0% {
+    stroke: #d62d20; }
+  40% {
+    stroke: #0057e7; }
+  66% {
+    stroke: #008744; }
+  80%, 90% {
+    stroke: #ffa700; } }
+
+    .login {
+        background-color:#387ef5;
+    }
+    .logo {
+        padding-top: 4em;
+        text-align:center;
+    }
+    .logo img {
+        height: 90px;
+    }
+
+    .mainImg {
+        width: 14%;
+    }
+    .mainAds {
+        width:30%;height:100%;
+        display: block;
+        margin: auto;
+    }
+    .mainFoot {
+        height:15%; padding:0px; border-top: 0px;
+    }
+
+@media screen and (max-width: 1199px) { /*<1200的设备*/
+	.mainImg {
+		width: 16%;
+	}
+    .mainAds {
+        width:100%;height:100%;
+    }
+    .mainFoot {
+        height:15%; padding:0px; border-top: 0px;
+    }
+}
+@media screen and (max-width: 991px) { /*<992的设备*/
+	.mainImg {
+		width: 32%;
+	}
+    .mainAds {
+        width:100%;height:100%;
+    }
+    .mainFoot {
+        height:15%; padding:0px; border-top: 0px;
+    }
+}
+@media screen and (max-width: 767px) { /*<768的设备*/
+	.mainImg {
+		width: 46%;
+	}
+    .mainAds {
+        width:100%;height:100%;
+    }
+    .mainFoot {
+        height:15%; padding:0px; border-top: 0px;
+    }
+@media screen and (max-width: 567px) { /*<568的设备*/
+	.mainImg {
+		width: 46%;
+	}
+    .mainAds {
+        width:100%;height:0%;
+    }
+    .mainFoot {
+        height:5%; padding:0px; border-top: 0px;
+    }
+}@media screen and (min-width: 1200px) { /*>1200的设备*/
+	.mainImg {
+		width: 14%;
+	}
+    .mainAds {
+        width:30%;height:100%;
+        display: block;
+        margin: auto;
+    }
+    .mainFoot {
+        height:15%; padding:0px; border-top: 0px;
+    }
+}
+
+.nav-info {
+	background-color: #387ef5;
+	height: 12em;
+
+}
+.nav-menu {
+}
+
+.nopadding {
+    padding: 2px;
+}
+.nopadding.row+.row {
+    margin-top: 0px;
+}
+
+.contactsList p {
+    font-size:0.8em;
+}
+
+.customerDetail .item-body {
+    padding: 8px;
+}
+.customerDetail .item-body .item {
+     padding: 8px;
+}
+
+.activityDetail .item-body {
+    padding: 1px;
+}
+.activityDetail .item-body .item {
+     padding: 1px;
+}
+
+.item-md-label input.used~.input-label, .item-md-label input:focus~.input-label {
+    -webkit-transform: translate3d(0,-60px,0) scale(1);
+    transform: translate3d(0,-60px,0) scale(1);
+    opacity: 1;
+}
+.itemNoBorder {
+    border-width: 0px;
+}
+.itemPadding {
+    padding: 4px;
+}
+
+.item-toggle .toggle {
+    top: 15px;
+    right: 16px;
+}
+.toggle .track {
+    width: 41px;
+    height: 21px;
+    border: solid 2px #e6e6e6;
+}
+.toggle .handle {
+    width: 17px;
+    height: 17px;
+    top: 7px;
+    left: 7px;
+}
+.toggle .handle:before {
+    top: -4px;
+    left: -21.5px;
+    padding: 18.5px 34px;
+}
+
+.showBorder{
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius:20px;
+}
+.showShadow {
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}

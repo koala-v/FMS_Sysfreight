@@ -1,0 +1,54 @@
+<ion-view title="SalesCost-Detail">
+    <ion-header-bar align-title="center" no-tap-scroll=false class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnList()"></button>
+        </div>
+        <h1 class="title">
+            <span ng-if="Smct1.TableType==='C'">Cost</span>
+            <span ng-if="Smct1.TableType==='SC'">Shipping Cost</span>
+            <span ng-if="Smct1.TableType==='CC'">Coloader Cost</span>
+            &nbsp;Detail
+        </h1>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <div class="card" ng-repeat="Smct2 in Smct2s">
+            <ion-list>
+                <ion-item nav-clear class="item item-icon-right">
+                    <div class="row nopadding">
+                        <div class="col nopadding">
+                            <p>Description</p>
+                        </div>
+                        <div class="col col-67 nopadding">
+                            <p>:&nbsp;&nbsp;<span class="h5" ng-bind="Smct2.ChargeDescription"></span></p>
+                        </div>
+                    </div>
+                    <div class="row nopadding">
+                        <div class="col col-50 nopadding">
+                            <p>Charge Unit&nbsp;:&nbsp;&nbsp;<span class="h5" ng-bind="Smct2.ChargeUnit"></span></p>
+                        </div>
+                        <div class="col nopadding">
+                            <p>Cont Type&nbsp;:&nbsp;&nbsp;<span class="h5" ng-bind="Smct2.CargoType"></span></p>
+                        </div>
+                    </div>
+                    <div class="row nopadding">
+                        <div class="col col-50 nopadding">
+                            <p>Curr&nbsp;:&nbsp;&nbsp;<span class="h5" ng-bind="Smct2.CurrCode"></span></p>
+                        </div>
+                        <div class="col nopadding">
+                            <p>GST&nbsp;:&nbsp;&nbsp;<span class="h5" ng-bind="Smct2.VatCode"></span></p>
+                        </div>
+                    </div>
+                    <div class="row nopadding">
+                        <div class="col col-50 nopadding">
+                            <p>Min Amt&nbsp;:&nbsp;&nbsp;<span class="h5" ng-bind="Smct2.MinAmt"></span></p>
+                        </div>
+                        <div class="col nopadding">
+                            <p>Amt&nbsp;:&nbsp;&nbsp;<span class="h5" ng-bind="Smct2.QuoteAmt"></span></p>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

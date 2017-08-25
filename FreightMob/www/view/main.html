@@ -1,0 +1,109 @@
+
+<ion-view title="Main">
+    <ion-nav-buttons>
+        <button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+        Freight Mobile
+    </ion-nav-title>
+    <ion-tabs class="tabs-striped tabs-top tabs-background-positive tabs-color-light tabs-icon-left">
+        <ion-tab title="CRM" icon-on="ion-ios-people" icon-off="ion-ios-people-outline">
+            <div style="height: 8.0em;"></div>
+            <div>
+                <div class="row row-center">
+                    <div class="col" style="text-align:center;">
+                        <a style="width:70%;height:100%;" ng-click="GoToSalesCost('Sales')"><img src="./img/currency_sign_dollar_128px.png" alt="" class="img-circle mainImg"></a>
+                        <h5>Sales</h5>
+                    </div>
+                    <div class="col" style="text-align:center;">
+                        <a style="width:70%;height:100%;" ng-click="GoToSalesCost('Cost')"><img src="./img/calculator_128px.png" alt="" class="img-circle mainImg"></a>
+                        <h5>Cost</h5>
+                    </div>
+                </div>
+                <div class="row row-center">
+                    <div class="col" style="text-align:center;">
+                        <a style="width:70%;height:100%;" ng-click="GoToSA()"><img src="./img/activity-monitor-256.png" alt="" class="img-circle mainImg"></a>
+                        <h5>Salesman Activity</h5>
+                    </div>
+                    <div class="col" style="text-align:center;">
+                        <a style="width:70%;height:100%;" ng-click="GoToRcbp()"><img src="./img/Contacts_128px.png" alt="" class="img-circle mainImg"></a>
+                        <h5>Contacts</h5>
+                    </div>
+                </div>
+            </div>
+        </ion-tab>
+        <ion-tab title="Productivity" icon-on="ion-ios-speedometer" icon-off="ion-ios-speedometer-outline">
+            <div style="height: 8.0em;"></div>
+            <div>
+                <div class="row row-center">
+                    <div class="col" style="text-align:center;">
+                        <a style="width:70%;height:100%;" ng-click="GoToPa()"><img src="./img/Wallet.png" alt="" class="img-circle mainImg"></a>
+                        <h5>Payment Approval</h5>
+                    </div>
+                    <div class="col" style="text-align:center;">
+                        <a style="width:70%;height:100%;" ng-click="GoToReminder()"><img src="./img/Reminders.png" alt="" class="img-circle mainImg"></a>
+                        <h5>Reminder</h5>
+                    </div>
+                </div>
+                <div class="row row-center">
+                    <div class="col" style="text-align:center;">
+                        <a style="width:70%;height:100%;" ng-click="GoToMemo()"><img src="./img/Notes_Ios.png" alt="" class="img-circle mainImg"></a>
+                        <h5>Memo</h5>
+                    </div>
+                    <div class="col" style="text-align:center;">
+                        <a style="width:70%;height:100%;" ng-click="GoToDocScan()"><img src="./img/camera_135px_1107411.png" alt="" class="img-circle mainImg"></a>
+                        <h5>Document Scan</h5>
+                    </div>
+                </div>
+                <div class="row row-center">
+                    <div class="col" style="text-align:center;">
+                        <a style="width:70%;height:100%;" ng-click="GoToRetrieveDoc()"><img src="./img/Folder_Documents_512px.png" alt="" class="img-circle mainImg"></a>
+                        <h5>Retrieve Document</h5>
+                    </div>
+                    <div class="col" style="text-align:center;">
+                    </div>
+                </div>
+            </div>
+        </ion-tab>
+        <ion-tab title="Tracking" icon-on="ion-ios-navigate" icon-off="ion-ios-navigate-outline">
+            <div style="height: 8.0em;"></div>
+            <div>
+                <div class="list">
+                    <div class="row row-center">
+                        <div class="col" style="text-align:center;">
+                            <a style="width:70%;height:100%;" ng-click="GoToVS()"><img src="./img/vesselschedule.png" alt="" class="img-circle mainImg"></a>
+                            <h5>Vessel Schedule</h5>
+                        </div>
+                        <div class="col" style="text-align:center;">
+                            <a style="width:70%;height:100%;" ng-click="GoToSS()"><img src="./img/Maps.png" alt="" class="img-circle mainImg"></a>
+                            <h5>Shipment Status</h5>
+                        </div>
+                    </div>
+                    <div class="row row-center">
+                        <div class="col" style="text-align:center;">
+                            <a style="width:70%;height:100%;" ng-click="GoToInv()"><img src="./img/document_128px_517125.png" alt="" class="img-circle mainImg"></a>
+                            <h5>Invoice</h5>
+                        </div>
+                        <div class="col" style="text-align:center;">
+                            <a style="width:70%;height:100%;" ng-click="GoToBL()"><img src="./img/document_128px_517165.png" alt="" class="img-circle mainImg"></a>
+                            <h5>BL</h5>
+                        </div>
+                    </div>
+                    <div class="row row-center">
+                        <div class="col" style="text-align:center;">
+                            <a style="width:70%;height:100%;" ng-click="GoToAWB()"><img src="./img/document_128px_517085.png" alt="" class="img-circle mainImg"></a>
+                            <h5>AWB</h5>
+                        </div>
+                        <div class="col" style="text-align:center;">
+                            <a style="width:70%;height:100%;" ng-click="GoToSOA()"><img src="./img/document_128px_517045.png" alt="" class="img-circle mainImg"></a>
+                            <h5>SOA</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-tab>
+    </ion-tabs>
+    <ion-footer-bar align-title="center" class="bar-positive mainFoot">
+        <img class="mainAds" src="./img/ad.png" alt="">
+    </ion-footer-bar>
+</ion-view>

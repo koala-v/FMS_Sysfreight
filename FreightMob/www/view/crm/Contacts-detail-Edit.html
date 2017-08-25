@@ -1,0 +1,84 @@
+
+<ion-view title="Contacts-Detail-Edit">
+    <ion-header-bar align-title="center" no-tap-scroll=false class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnDetail()"></button>
+        </div>
+        <h1 class="title">Edit - <span ng-bind="rcbp1.BusinessPartyName"></span></h1>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <div class="list card">
+            <div class="item item-body">
+                <label class="item item-input item-md-label ng-valid" id="iBusinessPartyName" highlight-color="balanced" type="text" ng-model="rcbp1.BusinessPartyName">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp1.BusinessPartyName">
+                    <span class="input-label" aria-label="Business Party Name">Business Party Name</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iAddress1" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp1.Address1">
+                    <span class="input-label"><i class='iconfont icon-address2'></i>&nbsp;&nbsp;Address 1</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iAddress2" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp1.Address2">
+                    <span class="input-label"><i class='iconfont icon-address2'></i>&nbsp;&nbsp;Address 2</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iAddress3" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp1.Address3">
+                    <span class="input-label"><i class='iconfont icon-address2'></i>&nbsp;&nbsp;Address 3</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iAddress4" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp1.Address4">
+                    <span class="input-label"><i class='iconfont icon-address2'></i>&nbsp;&nbsp;Address 4</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iCityCode" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp1.CityCode">
+                    <span class="input-label"><i class='iconfont icon-accountcity'></i>&nbsp;&nbsp;City Code</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iCountryCode" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp1.CountryCode">
+                    <span class="input-label"><i class='iconfont icon-accountcity'></i>&nbsp;&nbsp;Country Code</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iTelephone" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp1.Telephone">
+                    <span class="input-label"><i class='iconfont icon-phone3'></i>&nbsp;&nbsp;Telephone</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iFax" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp1.Fax">
+                    <span class="input-label"><i class='iconfont icon-fax1'></i>&nbsp;&nbsp;Fax</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iEmail" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp1.Email">
+                    <span class="input-label"><i class='iconfont icon-email'></i>&nbsp;&nbsp;Email</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iWebSite" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp1.WebSite">
+                    <span class="input-label"><i class='iconfont icon-website1'></i>&nbsp;&nbsp;WebSite</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar align-title="center" class="bar-positive">
+        <div class="buttons">
+            <button class="button" ng-click="returnUpdateRcbp1()">
+                <i class="icon ion-android-done"></i>&nbsp;&nbsp;Save
+            </button>
+        </div>
+        <h1 class="title"> </h1>
+        <div class="buttons">
+            <button class="button" ng-click="returnDetail()">
+                <i class="icon ion-arrow-return-right"></i>&nbsp;&nbsp;Return
+            </button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

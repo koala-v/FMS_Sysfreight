@@ -1,0 +1,134 @@
+
+<ion-view title="Contacts-Detail">
+    <ion-header-bar align-title="center" no-tap-scroll=false class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnList()"></button>
+        </div>
+        <h1 class="title">Customer Detail</h1>
+        <div class="buttons">
+            <button ng-if="ContactsDetail.TabIndex != 1" class="button button-icon button-small button-clear ion-android-create" ng-click="GoToCustomerEdit()"></button>
+            <button ng-if="ContactsDetail.TabIndex == 1" class="button button-icon button-small button-clear ion-android-person-add" ng-click="GoToContactAdd(rcbp3s)"></button>
+        </div>
+    </ion-header-bar>
+    <ion-tabs class="tabs-top tabs-background-positive tabs-color-light tabs-icon-left">
+        <ion-tab title="Customer" icon-on="ion-ios-world" icon-off="ion-ios-world-outline" on-select="TabClick(0)">
+            <div style="height: 43px;"></div>
+            <div style="height: 38px;"></div>
+            <ion-scroll>
+                <div class="card customerDetail">
+                    <div class="item">
+                        <h2><span ng-bind="rcbp1.BusinessPartyName"></span></h2>
+                    </div>
+                    <div class="item item-body">
+                        <div class="list">
+                            <!--div style="overflow:auto;_height:1%">
+                                <div style="float:left;">
+                                    <div class="item" style="border-width: 0px; word-break:break-all; word-wrap:break-word ;">
+                                        <textarea  rows="6" cols="33" ng-bind="rcbp1.Address1 + '\r\n' + rcbp1.Address2 + '\r\n' + rcbp1.Address3 + '\r\n' + rcbp1.Address4" readonly="true">
+                                        </textarea>
+                                    </div>
+                                </div>
+                                <div style="float:right;margin-top: 3em;margin-right: 1em;">
+                                    <a style="text-decoration: none;" ng-click="showMap()"><i class="iconfont ion-ios-navigate" style="font-size: 2em;"></i></a>
+                                </div>
+                            </div-->
+                            <div class="item row">
+                                <div class="col col-90">
+                                    <p style="margin-top: 0px;">
+                                        <span  ng-bind="rcbp1.Address1 + '\r\n' + rcbp1.Address2 + '\r\n' + rcbp1.Address3 + '\r\n' + rcbp1.Address4"></span>
+                                    </p>
+                                </div>
+                                <div class="col col-10">
+                                    <a style="text-decoration: none;" ng-click="showMap()"><i class="iconfont ion-ios-navigate" style="font-size: 2em;"></i></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <i class="iconfont icon-accountcity"></i>&nbsp;&nbsp;
+                                <span ng-bind="rcbp1.CityCode"></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span ng-bind="rcbp1.CityName"></span>
+                            </div>
+                            <div class="item">
+                                <i class="iconfont icon-accountcity"></i>&nbsp;&nbsp;
+                                <span ng-bind="rcbp1.CountryCode"></span>&nbsp;&nbsp;|&nbsp;&nbsp;<span ng-bind="rcbp1.CountryName"></span>
+                            </div>
+                            <div class="item">
+                                <i class="iconfont icon-phone3"></i>&nbsp;&nbsp;
+                                <span ng-bind="rcbp1.Telephone"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a ng-href="tel:{{rcbp1.Telephone}}" style="text-decoration: none;"><i class="icon iconfont ion-android-call"></i>&nbsp;Call</a>&nbsp;&nbsp;&nbsp;
+                                <a ng-click="ClickSendSMS(rcbp1.Telephone)"><i class="icon iconfont ion-android-textsms"></i>&nbsp;SMS</a>
+                            </div>
+                            <div class="item">
+                                <i class="iconfont icon-fax1"></i>&nbsp;&nbsp;
+                                <span ng-bind="rcbp1.Fax"></span>
+                            </div>
+                            <div class="item">
+                                <i class="iconfont icon-email"></i>&nbsp;&nbsp;
+                                <span ng-bind="rcbp1.Email"></span>
+                            </div>
+                            <div class="item">
+                                <i class="iconfont icon-website1"></i>&nbsp;&nbsp;
+                                <a ng-click="ClickWebUrl(rcbp1.WebSite)"><span ng-bind="rcbp1.WebSite"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--div class="button-bar">
+						<button class="button">
+							<i class="icon iconfont ion-android-call"></i>&nbsp;&nbsp;Call
+						</button>
+						<button class="button">
+							<i class="icon iconfont ion-android-textsms"></i>&nbsp;&nbsp;SMS
+						</button>
+						<button class="button">
+							<i class="icon iconfont ion-android-map"></i>&nbsp;&nbsp;Map
+						</button>
+					</div-->
+                </div>
+            </ion-scroll>
+        </ion-tab>
+        <ion-tab title="Contacts" icon-on="ion-ios-people" icon-off="ion-ios-people-outline" on-select="TabClick(1)">
+            <ion-scroll style="padding-top:93px;">
+                <ion-list can-swipe="false">
+                    <ion-item ng-repeat="rcbp3 in rcbp3s" class="item-icon-right contactsList">
+                        <div ng-click="GoToContactInfo(rcbp3)">
+                            <p><i class="iconfont icon-name"></i>&nbsp;&nbsp;<span ng-bind="rcbp3.ContactName" style="font-size:1.2em;"></span>&nbsp;&nbsp;&nbsp;&nbsp;<i class="iconfont icon-title1"></i>&nbsp;&nbsp;<span ng-bind="rcbp3.Title" style="font-size:1.2em;"></span></p>
+                            <p ng-if="rcbp3.Telephone != ''"><i class="iconfont icon-phone3"></i>&nbsp;&nbsp;<span ng-bind="rcbp3.Telephone" style="font-size:1.2em;"></span></p>
+                            <p ng-if="rcbp3.Fax != ''"><i class="iconfont icon-fax1"></i>&nbsp;&nbsp;<span ng-bind="rcbp3.Fax" style="font-size:1.2em;"></span></p>
+                            <p ng-if="rcbp3.Handphone != ''"><i class="iconfont icon-phone2"></i>&nbsp;&nbsp;<span ng-bind="rcbp3.Handphone" style="font-size:1.2em;"></span></p>
+                            <p ng-if="rcbp3.Email != ''"><i class="iconfont icon-email"></i>&nbsp;&nbsp;<span ng-bind="rcbp3.Email" style="font-size:1.2em;"></span></p>
+                            <p ng-if="rcbp3.Facebook != ''"><i class="iconfont icon-facebook"></i>&nbsp;&nbsp;<span ng-bind="rcbp3.Facebook" style="font-size:1.2em;"></span></p>
+                            <p ng-if="rcbp3.MSN != ''"><i class="iconfont icon-msn"></i>&nbsp;&nbsp;<span ng-bind="rcbp3.MSN" style="font-size:1.2em;"></span></p>
+                            <p ng-if="rcbp3.Skype != ''"><i class="iconfont icon-skype"></i>&nbsp;&nbsp;<span ng-bind="rcbp3.Skype" style="font-size:1.2em;"></span></p>
+                            <p ng-if="rcbp3.Twitter != ''"><i class="iconfont icon-twitter"></i>&nbsp;&nbsp;<span ng-bind="rcbp3.Twitter" style="font-size:1.2em;"></span></p>
+                            <p ng-if="rcbp3.QQ != ''"><i class="iconfont icon-qq"></i>&nbsp;&nbsp;<span ng-bind="rcbp3.QQ" style="font-size:1.2em;"></span></p>
+                        </div>
+                        <div>
+                            <i class="icon iconfont-assertive ion-android-delete" ng-click="GoToContactDel($index,rcbp3)"></i>
+                        </div>
+                        <ion-option-button class="button-assertive" ng-click="GoToContactDel($index,rcbp3)"><i class="icon ion-android-delete"></i></ion-option-button>
+                    </ion-item>
+                </ion-list>
+            </ion-scroll>
+        </ion-tab>
+    </ion-tabs>
+    <script id="map.html" type="text/ng-template">
+        <ion-modal-view>
+            <ion-header-bar align-title="center" no-tap-scroll=false class="bar-positive">
+                <div class="buttons">
+                    <button class="button button-icon button-clear ion-android-arrow-back" ng-click="closeMap()"></button>
+                </div>
+                <h1 class="title">Map</h1>
+            </ion-header-bar>
+            <ion-pane>
+                <div style="height: 43px;"></div>
+                <div id="map" style="height:480px;width:100%;"></div>
+            </ion-pane>
+            <ion-footer-bar align-title="center" class="bar-positive">
+                <h1 class="title"> </h1>
+                <div class="buttons">
+                    <button class="button" ng-click="closeMap()">
+                        <i class="icon ion-arrow-return-right"></i>&nbsp;&nbsp;Return
+                    </button>
+                </div>
+            </ion-footer-bar>
+        </ion-modal-view>
+    </script>
+</ion-view>

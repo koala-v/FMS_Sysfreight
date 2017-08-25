@@ -1,0 +1,28 @@
+<ion-view title="Login">
+    <ion-nav-buttons>
+        <button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+    </ion-nav-title>
+	<ion-pane class="login">
+        <div class="logo">
+            <img src="./img/login.png">
+        </div>
+        <div class="list" style="padding-top:4em; padding-left:2em;padding-right:2em;">
+            <label class="item item-input showBorder">
+                <span class="input-label" style="text-align:center; width: 30%;"><i class="icon ion-android-person placeholder-icon"></i></span>
+                <input type="text" id="iUserName" placeholder="User Name" ng-model="logininfo.strUserName">
+            </label>
+            <br/>
+            <label class="item item-input showBorder">
+                <span class="input-label" style="text-align:center; width: 30%;"><i class="icon ion-key placeholder-icon"></i></span>
+                <input type="password" id="iPassword" placeholder="Password" ng-model="logininfo.strPassword">
+            </label>
+            <br/>
+            <button class="button button-full button-stable showBorder" ng-click="login()">Sign in</button>
+            <button class="button button-full button-small button-clear" style="background-color:transparent;">
+                <span style="color:#fff;">Forgot password ?</span>
+            </button>
+        </div>
+	</ion-pane>
+</ion-view>

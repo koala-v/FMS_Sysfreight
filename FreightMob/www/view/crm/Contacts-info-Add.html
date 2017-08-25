@@ -1,0 +1,106 @@
+
+<ion-view title="Contacts-Detail-Add">
+    <ion-header-bar align-title="center" no-tap-scroll=false class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnDetail()"></button>
+        </div>
+        <h1 class="title">Contact - Add New</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <div class="list card">
+            <div class="item item-body">
+                <label class="item item-input item-md-label ng-valid" id="iContactName" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.ContactName">
+                    <span class="input-label"><i class='iconfont icon-name'></i>&nbsp;&nbsp;ContactName</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iTitle" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.Title">
+                    <span class="input-label"><i class='iconfont icon-title1'></i>&nbsp;&nbsp;Title</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iTelephone" highlight-color="balanced">
+                    <input type="tel" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.Telephone">
+                    <span class="input-label"><i class='iconfont icon-phone3'></i>&nbsp;&nbsp;Telephone</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iFax" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.Fax">
+                    <span class="input-label"><i class='iconfont icon-fax1'></i>&nbsp;&nbsp;Fax</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iHandphone" highlight-color="balanced">
+                    <input type="tel" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.Handphone">
+                    <span class="input-label"><i class='iconfont icon-phone2'></i>&nbsp;&nbsp;Handphone</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iEmail" highlight-color="balanced">
+                    <input type="email" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.Email">
+                    <span class="input-label"><i class='iconfont icon-email'></i>&nbsp;&nbsp;Email</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+            </div>
+            <div class="item item-body">
+                <!--label class="item item-input item-md-label ng-valid" id="iBirthday" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.Birthday">
+                    <span class="input-label"><i class='iconfont icon-birthdaycake'></i>&nbsp;&nbsp;Birthday</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label-->
+                <label class="item item-input item-md-label ng-valid" id="iLike" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.Like">
+                    <span class="input-label"><i class='iconfont icon-like'></i>&nbsp;&nbsp;Like</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iDislike" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.Dislike">
+                    <span class="input-label"><i class='iconfont icon-dislike'></i>&nbsp;&nbsp;Dislike</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iFacebook" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.Facebook">
+                    <span class="input-label"><i class='iconfont icon-facebook'></i>&nbsp;&nbsp;Facebook</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iMSN" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.MSN">
+                    <span class="input-label"><i class='iconfont icon-msn'></i>&nbsp;&nbsp;MSN</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iSkype" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.Skype">
+                    <span class="input-label"><i class='iconfont icon-skype'></i>&nbsp;&nbsp;Skype</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iTwitter" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.Twitter">
+                    <span class="input-label"><i class='iconfont icon-twitter'></i>&nbsp;&nbsp;Twitter</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iQQ" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.QQ">
+                    <span class="input-label"><i class='iconfont icon-qq'></i>&nbsp;&nbsp;QQ</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+                <label class="item item-input item-md-label ng-valid" id="iOthers" highlight-color="balanced">
+                    <input type="text" class="md-input ng-pristine ng-valid used ng-touched" ng-model="rcbp3.Others">
+                    <span class="input-label">Others</span>
+                    <div class="highlight highlight-balanced"></div>
+                </label>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar align-title="center" class="bar-positive">
+        <div class="buttons">
+            <button class="button" ng-click="returnInsertRcbp3()">
+                <i class="icon ion-android-done"></i>&nbsp;&nbsp;Save
+            </button>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button" ng-click="returnDetail()">
+                <i class="icon ion-arrow-return-right"></i>&nbsp;&nbsp;Return
+            </button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

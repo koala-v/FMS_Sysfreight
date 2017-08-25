@@ -1,0 +1,77 @@
+<ion-view title="SalesCost-List">
+    <ion-header-bar align-title="center" no-tap-scroll=true class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnSearch()"></button>
+        </div>
+        <h1 class="title">List</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <div class="card" ng-repeat="Smct1 in Smct1s">
+            <div class="list">
+                <ion-item nav-clear class="item" ng-click="GoToDetail(Smct1)">
+                    <div class="row nopadding">
+                        <div class="col col-33 nopadding">
+                            <p ng-if="Smct1.TableType==='C'">Vendor</p>
+                            <p ng-if="Smct1.TableType==='SC'">Shippingline</p>
+                            <p ng-if="Smct1.TableType==='CC'">Coloader</p>
+                            <p ng-if="Smct1.TableType!='C' && Smct1.TableType!='SC' && Smct1.TableType!='CC'">Customer</p>
+                        </div>
+                        <div class="col nopadding">
+                            <p>:&nbsp;&nbsp;<span class="h5" ng-bind="Smct1.PartyName"></span></p>
+                        </div>
+                    </div>
+                    <div class="row nopadding">
+                        <div class="col col-33 nopadding">
+                            <p>POL</p>
+                        </div>
+                        <div class="col nopadding">
+                            <p>:&nbsp;&nbsp;<span class="h5" ng-bind="Smct1.PortOfLoadingCode"></span></p>
+                        </div>
+                    </div>
+                    <div class="row nopadding">
+                        <div class="col col-33 nopadding">
+                            <p>POD</p>
+                        </div>
+                        <div class="col nopadding">
+                            <p>:&nbsp;&nbsp;<span class="h5" ng-bind="Smct1.PortOfDischargeCode"></span></p>
+                        </div>
+                    </div>
+                    <div class="row nopadding">
+                        <div class="col col-33 nopadding">
+                            <p>Effective Date</p>
+                        </div>
+                        <div class="col nopadding">
+                            <p>:&nbsp;&nbsp;<span class="h5" ng-bind="ShowDate(Smct1.EffectiveDate)"></span></p>
+                        </div>
+                    </div>
+                    <div class="row nopadding">
+                        <div class="col col-33 nopadding">
+                            <p>Expiry Date</p>
+                        </div>
+                        <div class="col nopadding">
+                            <p>:&nbsp;&nbsp;<span class="h5" ng-bind="ShowDate(Smct1.ExpiryDate)"></span></p>
+                        </div>
+                    </div>
+                    <div class="row nopadding">
+                        <div class="col col-33 nopadding">
+                            <p>Module</p>
+                        </div>
+                        <div class="col nopadding">
+                            <p>:&nbsp;&nbsp;<span class="h5" ng-bind="Smct1.ModuleCode"></span></p>
+                        </div>
+                    </div>
+                    <div class="row nopadding">
+                        <div class="col col-33 nopadding">
+                            <p>Job Type</p>
+                        </div>
+                        <div class="col nopadding">
+                            <p>:&nbsp;&nbsp;<span class="h5" ng-bind="Smct1.JobType"></span></p>
+                        </div>
+                    </div>
+                </ion-item>
+            </div>
+        </div>
+        <ion-infinite-scroll ng-if="List.CanLoadedMoreData" on-infinite="loadMore()" distance="1%"></ion-infinite-scroll>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,50 @@
+<ion-view title="DocumentScan">
+    <ion-header-bar class="bar-positive" align-title="center">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnDoc()"></button>
+        </div>
+        <div class="h1 title">Upload</div>
+    </ion-header-bar>
+    <ion-pane>
+        <div style="height: 43px;"></div>
+        <div>
+            <div>
+                <input type="file" nv-file-select="" uploader="uploader" />
+            </div>
+            <div>
+                <div class="col-md-12">
+                   <table class="table" ng-show="uploader.queue.length > 0">
+                       <thead>
+                           <tr>
+                               <th width="33%">Name</th>
+                               <th width="33%" ng-show="uploader.isHTML5">Size</th>
+                               <th width="33%">Actions</th>
+                           </tr>
+                       </thead>
+                       <tbody>
+                           <tr ng-repeat="item in uploader.queue">
+                               <td><strong>{{ item.file.name }}</strong></td>
+                               <td ng-show="uploader.isHTML5" nowrap> {{ item.file.size/1024/1024|number:2 }} MB </td>
+                               <td nowrap>
+                                   <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                                       <span class="glyphicon glyphicon-upload"></span> Upload
+                                   </button>
+                                   <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+                                       <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+                                   </button>
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+               </div>
+           </div>
+        </div>
+    </ion-pane>
+    <ion-footer-bar class="bar-positive hide-on-keyboard-open">
+        <div class="button-bar">
+            <button class="button icon ion-arrow-return-right" ng-click="returnDoc()">
+                &nbsp;Return
+            </button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,69 @@
+<ion-view title="SalesCost">
+    <ion-header-bar align-title="center" no-tap-scroll=false class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnMain()"></button>
+        </div>
+        <h1 class="title">
+            <span ng-if="Search.Type==='Sales'">Sales</span>
+            <span ng-if="Search.Type==='Cost'">Cost</span>
+            &nbsp;Table Search
+         </h1>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <ion-list>
+            <div class="card">
+                <!--ion-md-input type="text" id="iEffectiveDate" placeholder="Effective Date" highlight-color="balanced" ng-model="Search.EffectiveDate"></ion-md-input>
+                <ion-md-input type="text" id="iExpiryDate" placeholder="Expiry Date" highlight-color="balanced" ng-model="Search.ExpiryDate"></ion-md-input-->
+                <div class="item" ng-show="Search.Type==='Sales'">
+                    <ion-md-input type="text" id="iPNS" class="pull-left" style="width:80%;" placeholder="Customer" highlight-color="balanced" ng-model="Search.PartyNameSales"></ion-md-input>
+                    <div style="width:20%;position:relative;">
+                        <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="GoToList()">
+                            <i class="icon iconfont ion-android-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="item" ng-show="Search.Type==='Cost'">
+                    <ion-md-input type="text" id="iPNC" class="pull-left" style="width:80%;" placeholder="Vendor" highlight-color="balanced" ng-model="Search.PartyNameCost"></ion-md-input>
+                    <div style="width:20%;position:relative;">
+                        <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="GoToList()">
+                            <i class="icon iconfont ion-android-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <ion-md-input type="text" id="iPOL" class="pull-left" style="width:80%;" placeholder="POL" highlight-color="balanced" ng-model="Search.PortOfLoadingCode"></ion-md-input>
+                    <div style="width:20%;position:relative;">
+                        <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="GoToList()">
+                            <i class="icon iconfont ion-android-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <ion-md-input type="text" id="iPOD" class="pull-left" style="width:80%;" placeholder="POD" highlight-color="balanced" ng-model="Search.PortOfDischargeCode"></ion-md-input>
+                    <div style="width:20%;position:relative;">
+                        <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="GoToList()">
+                            <i class="icon iconfont ion-android-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <ion-md-input type="text" id="iModule" class="pull-left" style="width:80%;" placeholder="Module" highlight-color="balanced" ng-model="Search.ModuleCode"></ion-md-input>
+                    <div style="width:20%;position:relative;">
+                        <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="GoToList()">
+                            <i class="icon iconfont ion-android-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <ion-md-input type="text" id="iJobType" class="pull-left" style="width:80%;" placeholder="Job Type" highlight-color="balanced" ng-model="Search.JobType"></ion-md-input>
+                    <div style="width:20%;position:relative;">
+                        <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="GoToList()">
+                            <i class="icon iconfont ion-android-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

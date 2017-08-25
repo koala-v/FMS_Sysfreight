@@ -1,0 +1,68 @@
+
+<ion-view title="VesselScheduleDetail">
+    <ion-header-bar align-title="center" no-tap-scroll=true class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnList()"></button>
+        </div>
+        <h1 class="title"><span ng-bind="Rcvy1Detail.PortOfDischargeName"></span></h1>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <div class="card" ng-repeat="Rcvy1 in Rcvy1s">
+            <div class="list">
+                <ion-item nav-clear class="item">
+                    <div class="row nopadding">
+                        <div class="col nopadding">
+                            <p>Vsl / Voy</p>
+                        </div>
+                        <div class="col col-80 nopadding">
+                            <p>:&nbsp;&nbsp;<span class="h5"><span ng-bind="Rcvy1.VesselCode"></span>&nbsp;V.&nbsp;<span ng-bind="Rcvy1.VoyageNo"></span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row nopadding">
+                        <div class="col nopadding">
+                            <p>Carrier</p>
+                        </div>
+                        <div class="col col-80 nopadding">
+                            <p>:&nbsp;&nbsp;<span class="h5" ng-bind="Rcvy1.ShippinglineName"></span></p>
+                        </div>
+                    </div>
+                    <div class="row nopadding">
+                        <div class="col nopadding">
+                            <p>Transit</p>
+                        </div>
+                        <div class="col col-80 nopadding">
+                            <p>:&nbsp;&nbsp;<span class="h5"><span ng-bind="Rcvy1.TranSit"></span>&nbsp;&nbsp;Days</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row nopadding">
+                        <div class="col nopadding">
+                            <p>ETD</p>
+                        </div>
+                        <div class="col col-80 nopadding">
+                            <p>:&nbsp;&nbsp;<span class="h5" ng-bind="ShowDate(Rcvy1.ETD)"></span></p>
+                        </div>
+                    </div>
+                    <div class="row nopadding">
+                        <div class="col nopadding">
+                            <p>ETA</p>
+                        </div>
+                        <div class="col col-80 nopadding">
+                            <p>:&nbsp;&nbsp;<span class="h5" ng-bind="ShowDate(Rcvy1.ETA)"></span></p>
+                        </div>
+                    </div>
+                    <div class="row nopadding">
+                        <div class="col nopadding">
+                            <p>Cls Date</p>
+                        </div>
+                        <div class="col col-80 nopadding">
+                            <p>:&nbsp;&nbsp;<span class="h5" ng-bind="ShowDatetime(Rcvy1.CloseDateTime)"></span></p>
+                        </div>
+                    </div>
+                </ion-item>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view title="RetrieveDoc">
+    <ion-header-bar align-title="center" no-tap-scroll=false class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnSearch()"></button>
+        </div>
+        <h1 class="title">Retrieve Document List</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <div class="card" ng-repeat="Jmjm1 in Jmjm1s">
+            <div class="list">
+                <ion-item nav-clear menu-close class="item">
+                    <h2>Job  No&nbsp;:&nbsp;<span ng-bind="Jmjm1.JobNo"></span></h2>
+                    <div ng-repeat="File in Jmjm1.Files">
+                        <div class="row" style="padding:0;">
+                            <div class="col col-80">
+                                <h3 style="padding-top: 1em;">File&nbsp;:&nbsp;<span ng-bind="File.FileName"></span></h3>
+                            </div>
+                            <div class="col">
+                                <button class="button button-clear" ng-click="download(Jmjm1, File)">
+                                    <i class="icon iconfont ion-android-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

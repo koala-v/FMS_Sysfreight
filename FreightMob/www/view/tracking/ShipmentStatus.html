@@ -1,0 +1,74 @@
+
+<ion-view title="ShipmentStatus">
+    <ion-header-bar align-title="center" no-tap-scroll=true class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnMain()"></button>
+        </div>
+        <h1 class="title">Shipment Tracking</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <ion-list>
+            <div class="card">
+                <div class="item">
+                    <ion-md-input type="text" id="iContainerNo" class="pull-left" style="width:80%;" placeholder="Container No" highlight-color="balanced" ng-model="Tracking.ContainerNo"></ion-md-input>
+                    <div style="width:20%;position:relative;">
+                        <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="GoToDetail('Container No')">
+                            <i class="icon iconfont ion-android-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="item">
+                    <ion-md-input type="text" id="iJobNo" class="pull-left" style="width:80%;" placeholder="Job No" highlight-color="balanced" ng-model="Tracking.JobNo"></ion-md-input>
+                    <div style="width:20%;position:relative;">
+                        <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="GoToDetail('Job No')">
+                            <i class="icon iconfont ion-android-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="item">
+                    <ion-md-input type="text" id="iBLNo" class="pull-left" style="width:80%;" placeholder="BL No" highlight-color="balanced" ng-model="Tracking.BLNo"></ion-md-input>
+                    <div style="width:20%;position:relative;">
+                        <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="GoToDetail('BL No')">
+                            <i class="icon iconfont ion-android-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="item">
+                    <ion-md-input type="text" id="iAWBNo" class="pull-left" style="width:80%;" placeholder="AWB No" highlight-color="balanced" ng-model="Tracking.AWBNo"></ion-md-input>
+                    <div style="width:20%;position:relative;">
+                        <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="GoToDetail('AWB No')">
+                            <i class="icon iconfont ion-android-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="item">
+                    <ion-md-input type="text" id="iOrderNo" class="pull-left" style="width:80%;" placeholder="Order No" highlight-color="balanced" ng-model="Tracking.OrderNo"></ion-md-input>
+                    <div style="width:20%;position:relative;">
+                        <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="GoToDetail('Order No')">
+                            <i class="icon iconfont ion-android-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="item">
+                    <ion-md-input type="text" id="iReferenceNo" class="pull-left" style="width:80%;" placeholder="Reference No" highlight-color="balanced" ng-model="Tracking.ReferenceNo"></ion-md-input>
+                    <div style="width:20%;position:relative;">
+                        <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="GoToDetail('Reference No')">
+                            <i class="icon iconfont ion-android-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

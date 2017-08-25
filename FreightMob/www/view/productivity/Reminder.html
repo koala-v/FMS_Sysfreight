@@ -1,0 +1,30 @@
+
+<ion-view title="Reminder">
+    <ion-header-bar align-title="center" no-tap-scroll=false class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnMain()"></button>
+        </div>
+        <h1 class="title">Reminder</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <ion-list>
+            <div class="card" ng-repeat="item in items">
+                <ion-item>
+                    <h2><span ng-bind="item.Subject"></span></h2>
+                    <p><i class="iconfont icon-date"></i>&nbsp;&nbsp;<span ng-bind="item.DueDate"></span>&nbsp;&nbsp;<span ng-bind="item.DueTime"></span></p>
+                    <br/>
+                    <textarea style="width:100%;height:50px;" ng-bind="item.Message" readonly="true"></textarea>
+                </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+    <ion-footer-bar align-title="center" class="bar-positive">
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button" ng-click="returnMain()">
+                <i class="icon ion-arrow-return-right"></i>&nbsp;&nbsp;Back
+            </button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,62 @@
+
+<ion-view title="SOA">
+    <ion-header-bar align-title="center" no-tap-scroll=false class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnMain()"></button>
+        </div>
+        <h1 class="title">STATEMENT OF ACCOUNTS</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <div class="card" ng-repeat="Slcu1 in Slcu1s">
+            <div class="list">
+                <ion-item nav-clear menu-close class="item">
+                    <div class="row" style="padding:0;">
+                        <div class="col col-33">
+                            <h2>Invoice  No</h2>
+                        </div>
+                        <div class="col">
+                            <h2>&nbsp;:&nbsp;<span ng-bind="Slcu1.InvoiceNo"></span></h2>
+                        </div>
+                    </div>
+                    <div class="row" style="padding:0;">
+                        <div class="col col-33">
+                            <h2>Invoice  Date</h2>
+                        </div>
+                        <div class="col">
+                            <h2>&nbsp;:&nbsp;<span ng-bind="ShowDate(Slcu1.InvoiceDate)"></span></h2>
+                        </div>
+                    </div>
+                    <div class="row" style="padding:0;">
+                        <div class="col col-33">
+                            <h2>Customer Name</h2>
+                        </div>
+                        <div class="col">
+                            <h2>&nbsp;:&nbsp;<span ng-bind="Slcu1.CustomerName"></span></h2>
+                        </div>
+                    </div>
+                    <div class="row" style="padding:0;">
+                        <div class="col col-33">
+                            <h2>Amt</h2>
+                        </div>
+                        <div class="col">
+                            <h2>&nbsp;:&nbsp;<span ng-bind="Slcu1.InvoiceAmt"></span></h2>
+                        </div>
+                    </div>
+                    <div ng-repeat="File in Slcu1.Files">
+                        <div class="row" style="padding:0;">
+                            <div class="col col-80">
+                                <h3 style="padding-top: 1em;">File&nbsp;:&nbsp;<span ng-bind="File.FileName"></span></h3>
+                            </div>
+                            <div class="col">
+                                <button class="button button-clear" ng-click="download(Slcu1, File)">
+                                    <i class="icon iconfont ion-android-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

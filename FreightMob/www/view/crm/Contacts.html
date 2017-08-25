@@ -1,0 +1,23 @@
+<ion-view title="Contacts">
+    <ion-header-bar align-title="center" no-tap-scroll=false class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnMain()"></button>
+        </div>
+        <h1 class="title">Search Contact</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div style="height: 43px;"></div>
+        <ion-list>
+            <div class="card">
+                <div class="item">
+                    <ion-md-input type="text" id="iBusinessPartyName" class="pull-left" style="width:80%;" placeholder="Business Party Name" highlight-color="balanced" ng-model="Rcbp.BusinessPartyNameLike"></ion-md-input>
+                    <div style="width:20%;position:relative;">
+                        <button class="button button-clear" style="position:absolute; top:50%; margin-top:12px;" ng-click="GoToList()">
+                            <i class="icon iconfont ion-android-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

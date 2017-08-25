@@ -1,0 +1,30 @@
+
+<ion-view title="VesselSchedule">
+    <ion-header-bar align-title="center" no-tap-scroll=false class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon button-clear ion-android-arrow-back" ng-click="returnMain()"></button>
+        </div>
+        <!--div class="item-input-inset" style="width:90%;">
+			<label class="item-input-wrapper">
+				<i class="icon ion-ios-search placeholder-icon"></i>
+				<input id="txt-PortOfDischargeName" type="search" placeholder="Search Port Name" style="width:100%;" ng-model="rcvy.PortOfDischargeName">
+			</label>
+		</div-->
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button button-icon icon ion-ios-search-strong" ng-click="showFilterBar()"></button>
+        </div>
+    </ion-header-bar>
+    <ion-content header-shrink scroll-event-interval="5">
+        <div style="height: 43px;"></div>
+        <ion-refresher pulling-icon="ion-arrow-down-b" on-refresh="refreshItems()"></ion-refresher>
+        <ion-list>
+            <ion-item nav-clear menu-close class="item" ng-repeat="PortOfDischargeName in PortOfDischargeNames" ng-click="GoToDetail(PortOfDischargeName)">
+                <h2><i class="iconfont icon-address4"></i>&nbsp;&nbsp;<span ng-bind="PortOfDischargeName"></span></h2>
+            </ion-item>
+        </ion-list>
+        <div ng-if="PortOfDischargeNames !== undefined && !PortOfDischargeNames.length" class="item">
+            <h2><i class="iconfont icon-address4"></i>&nbsp;&nbsp;<span>No Results</span></h2>
+        </div>
+    </ion-content>
+</ion-view>
