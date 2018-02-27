@@ -2,8 +2,8 @@
 var appConfig = angular.module('MobileAPP.config', []);
 appConfig.value('ENV', {
     'website':      'www.sysfreight.net/app/fms/sysfreight',
-    // 'api':          'www.sysfreight.net/apis/fms/sysfreight',
-   api:  'http://localhost:7040',
+    'api':          'www.sysfreight.net/apis/fms/sysfreight',
+  //  api:  'http://localhost:7040',
     'reset':  {
         'website':      'www.sysfreight.net/app/fms/sysfreight',
         'api':          'www.sysfreight.net/apis/fms/sysfreight',
@@ -11,7 +11,7 @@ appConfig.value('ENV', {
         'mapProvider':  'google'
     },
     'ssl':          '0', // 0 : false, 1 : true
-    // 'port':         '8081', // http port no
+    'port':         '8081', // http port no
     'debug':        true,
     'mock':         false,
     'fromWeb':      true,
